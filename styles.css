@@ -330,8 +330,6 @@ img {
   justify-self: center;
 }
 
-/* Common @media */
-
 @media screen and (min-width: 576px) {
   .home__container {
     grid-template-columns: 0.7fr;
@@ -351,7 +349,7 @@ img {
   justify-self: center;
 }
 
-@media screen and(min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .home__img {
     width: 600px;
     position: absolute;
@@ -364,7 +362,7 @@ img {
   text-align: center;
 }
 
-@media screen and(min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .home__data {
     text-align: initial;
     order: -1;
@@ -375,6 +373,7 @@ img {
   font-size: var(--font-2xl);
   margin-bottom: 1rem;
 }
+
 .home__description {
   padding: 0 1rem;
   margin-bottom: 2.5rem;
