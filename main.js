@@ -53,4 +53,32 @@ window.addEventListener("scroll", scrollUp);
 
 // ~~~~~~~~~~~~~~~~~~~~~ DARK LIGHT THEME  ~~~~~~~~~~~~~~~~~~~~~~~~
 
+const themeButton = document.getElementById("theme-button");
+
+if (localStorage.getItem("mode") == "dark") {
+  darkMode();
+} else {
+  lightMode();
+}
+
+themeButton.addEventListener("click", (e) => {
+  if (localStorage.getItem("mode") == "light") {
+    darkMode();
+  } else {
+    lightMode();
+  }
+});
+
+function darkMode() {
+  document.body.classList.add("dark-theme");
+  themeButton.classList.replace("fa-moon", "fa-sun");
+  localStorage.setItem("mode", "dark");
+}
+
+function lightMode() {
+  document.body.classList.remove("dark-theme");
+  themeButton.classList.replace("fa-sun", "fa-moon");
+  localStorage.setItem("mode", "light");
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~~~~~~~~~~
